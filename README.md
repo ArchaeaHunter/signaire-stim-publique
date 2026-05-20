@@ -27,7 +27,7 @@ git clone git@github.com:ArchaeaHunter/signaire-stim-publique.git
 cd signaire-stim-publique
 ```
 
-Lancer la commande  [uv](https://docs.astral.sh/uv/)
+Lancer la commande avec [uv](https://docs.astral.sh/uv/)
 ```
 uv run python3 src/script_figures.py --csv data/database_without_names.csv --dir figures
 ```
