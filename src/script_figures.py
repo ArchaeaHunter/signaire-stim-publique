@@ -108,7 +108,7 @@ def plot_cumsum_dates(df, save_dir):
     )
 
     fig.update_layout(
-        margin=dict(t=60, l=25, r=25, b=25),
+        margin=dict(t=80, l=25, r=25, b=25),
         paper_bgcolor="#112760",
         plot_bgcolor="#112760",
         xaxis_title=dict(font=dict(size=20, color="white")),
@@ -121,7 +121,7 @@ def plot_cumsum_dates(df, save_dir):
             x=0.5,
             xanchor="center",
             yanchor="top",
-            font=dict(size=25, color="white"),
+            font=dict(size=45, color="white"),
         ),
     )
 
