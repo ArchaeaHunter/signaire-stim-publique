@@ -58,6 +58,7 @@ def plot_treemap_domains_subdomains(df, save_dir):
         branchvalues="total",
         textinfo="label+value",
         textfont_size=25,
+        marker_line=dict(color="#112760", width=1),
     )
     fig.update_layout(
         margin=dict(t=60, l=25, r=25, b=25),
@@ -163,7 +164,7 @@ def plot_treemap_domain_year(df, save_dir):
         color_discrete_sequence=color_scale,
         title="Répartition du signaire par domaines et année de création",
         width=1500,
-        height=1000,
+        height=1000
     )
     fig.update_traces(
         marker=dict(cornerradius=5),
@@ -172,6 +173,7 @@ def plot_treemap_domain_year(df, save_dir):
         branchvalues="total",
         textinfo="label+value",
         textfont_size=25,
+        marker_line=dict(color="#112760", width=1),
     )
     fig.update_layout(
         margin=dict(t=60, l=25, r=25, b=25),
@@ -229,6 +231,7 @@ def plot_treemap_year_domain(df, save_dir):
         branchvalues="total",
         textinfo="label+value",
         textfont_size=25,
+        marker_line=dict(color="#112760", width=1),
     )
     fig.update_layout(
         margin=dict(t=60, l=25, r=25, b=25),
