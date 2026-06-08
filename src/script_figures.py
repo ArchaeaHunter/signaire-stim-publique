@@ -61,15 +61,15 @@ def plot_treemap_domains_subdomains(df, save_dir):
     )
     fig.update_layout(
         margin=dict(t=60, l=25, r=25, b=25),
-        paper_bgcolor="#112760",
+        paper_bgcolor="#F3F3F3",
         plot_bgcolor="#112760",
         title=dict(
             text="Répartition du signaire par domaines et sous-domaines",
-            y=0.98,
+            y=0.99,
             x=0.5,
             xanchor="center",
             yanchor="top",
-            font=dict(size=45, color="white"),
+            font=dict(size=45, color="#112760"),
         ),
     )
 
@@ -102,30 +102,32 @@ def plot_cumsum_dates(df, save_dir):
         dates,
         x="Date",
         y="cumsum",
-        title="Evolution du nombre de signes au cours du temps",
+        title="Évolution du nombre de signes au cours du temps",
         width=1500,
         height=1000,
     )
 
     fig.update_layout(
         margin=dict(t=80, l=25, r=25, b=25),
-        paper_bgcolor="#112760",
-        plot_bgcolor="#112760",
-        xaxis_title=dict(font=dict(size=20, color="white")),
-        yaxis_title=dict(text="Somme cumulée", font=dict(size=20, color="white")),
-        xaxis=dict(tickfont=dict(size=16, color="white")),
-        yaxis=dict(tickfont=dict(size=16, color="white")),
+        paper_bgcolor="#F3F3F3",
+        plot_bgcolor="#F3F3F3",
+        xaxis_title=dict(font=dict(size=20, color="#112760")),
+        yaxis_title=dict(text="Somme cumulée", font=dict(size=20, color="#112760")),
+        xaxis=dict(tickfont=dict(size=16, color="#112760")),
+        yaxis=dict(tickfont=dict(size=16, color="#112760")),
         title=dict(
             text="Evolution du nombre de signes au cours du temps",
-            y=0.98,
+            y=0.99,
             x=0.5,
             xanchor="center",
             yanchor="top",
-            font=dict(size=45, color="white"),
+            font=dict(size=45, color="#112760"),
         ),
     )
 
     fig.update_traces(line_color="#FF7011", line_width=5)
+    fig.update_xaxes(showgrid=True, gridwidth=1, gridcolor='#112760',zeroline=True, zerolinewidth=2, zerolinecolor='#112760')
+    fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor='#112760',zeroline=True, zerolinewidth=2, zerolinecolor='#112760')
 
     fig.write_html(
         os.path.join(save_dir, "signes_au_cours_du_temps.html"),
@@ -153,6 +155,7 @@ def plot_treemap_domain_year(df, save_dir):
     color_scale = px.colors.sample_colorscale(
         "oranges", [n / (n_colors - 1) for n in range(n_colors)]
     )
+
     fig = px.treemap(
         dom_pers,
         values="N°ID",
@@ -172,15 +175,15 @@ def plot_treemap_domain_year(df, save_dir):
     )
     fig.update_layout(
         margin=dict(t=60, l=25, r=25, b=25),
-        paper_bgcolor="#112760",
+        paper_bgcolor="#F3F3F3",
         plot_bgcolor="#112760",
         title=dict(
             text="Répartition du signaire par domaines et année de création",
-            y=0.98,
+            y=0.99,
             x=0.5,
             xanchor="center",
             yanchor="top",
-            font=dict(size=45, color="white"),
+            font=dict(size=45, color="#112760"),
         ),
     )
 
@@ -229,15 +232,15 @@ def plot_treemap_year_domain(df, save_dir):
     )
     fig.update_layout(
         margin=dict(t=60, l=25, r=25, b=25),
-        paper_bgcolor="#112760",
+        paper_bgcolor="#F3F3F3",
         plot_bgcolor="#112760",
         title=dict(
             text="Répartition du signaire par domaines et année de création",
-            y=0.98,
+            y=0.99,
             x=0.5,
             xanchor="center",
             yanchor="top",
-            font=dict(size=45, color="white"),
+            font=dict(size=45, color="#112760"),
         ),
     )
 
