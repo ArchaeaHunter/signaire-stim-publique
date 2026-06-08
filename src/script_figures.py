@@ -127,8 +127,22 @@ def plot_cumsum_dates(df, save_dir):
     )
 
     fig.update_traces(line_color="#FF7011", line_width=5)
-    fig.update_xaxes(showgrid=True, gridwidth=1, gridcolor='#112760',zeroline=True, zerolinewidth=2, zerolinecolor='#112760')
-    fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor='#112760',zeroline=True, zerolinewidth=2, zerolinecolor='#112760')
+    fig.update_xaxes(
+        showgrid=True,
+        gridwidth=1,
+        gridcolor="#112760",
+        zeroline=True,
+        zerolinewidth=2,
+        zerolinecolor="#112760",
+    )
+    fig.update_yaxes(
+        showgrid=True,
+        gridwidth=1,
+        gridcolor="#112760",
+        zeroline=True,
+        zerolinewidth=2,
+        zerolinecolor="#112760",
+    )
 
     fig.write_html(
         os.path.join(save_dir, "signes_au_cours_du_temps.html"),
@@ -164,7 +178,7 @@ def plot_treemap_domain_year(df, save_dir):
         color_discrete_sequence=color_scale,
         title="Répartition du signaire par domaines et année de création",
         width=1500,
-        height=1000
+        height=1000,
     )
     fig.update_traces(
         marker=dict(cornerradius=5),
